@@ -1,7 +1,3 @@
 /hacker-rank.iml
-/.idea/misc.xml
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/compiler.xml
-/.idea/jarRepositories.xml
-/.idea/vcs.xml
+/.idea/
+/target/
