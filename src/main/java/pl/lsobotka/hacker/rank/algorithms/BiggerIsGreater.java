@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /*
- * https://www.hackerrank.com/challenges/almost-sorted/problem
+ * https://www.hackerrank.com/challenges/bigger-is-greater/problem
  * */
 public class BiggerIsGreater {
 
