@@ -7,6 +7,8 @@ import org.junit.jupiter.params.provider.MethodSource;
 import pl.lsobotka.hacker.rank.BaseTest;
 
 import java.util.Arrays;
+import java.util.Deque;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Stream;
 
@@ -33,16 +35,15 @@ public class NonDivisibleSubsetTest extends BaseTest {
     public void subsetFileTest() throws Exception {
 
         String inputName = "NonDivisibleSubset_input";
-        List<String> input = getFileInput(inputName);
+        Deque<String> input = new LinkedList<>(getFileInput(inputName));
 
-        int k = Integer.parseInt(input.get(0).trim());
-        List<Integer> integers = Stream.of(input.get(1).split("\s"))
+        int k = Integer.parseInt(input.removeFirst().trim());
+        List<Integer> integers = Stream.of(input.removeFirst().split("\s"))
                 .map(Integer::parseInt)
                 .collect(toList());
-        int expectedOutput = Integer.parseInt(input.get(2).trim());
+        int expectedOutput = Integer.parseInt(input.removeFirst().trim());
 
         assertEquals(expectedOutput, NonDivisibleSubset.nonDivisibleSubset(k, integers));
     }
-
 
 }
